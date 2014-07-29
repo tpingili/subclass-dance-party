@@ -9,7 +9,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.title, .addDancerButton, button{
   padding:5px 12px;
   float:right;
 }
@@ -24,4 +24,23 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+}
+.blinkyDancer{
+  border:10px solid green;
+}
+.scaleDancer{
+  border: 10px solid yellow;
+}
+.growDancer {
+  height: 20px;
+  width: 10px;
+  border:5px solid red;
+  border-radius: none;
+}
+.rotatingGrowDancer{
+  border: 5px solid #99FFFF;
+}
+
+.movingScaleDancer{
+  border: 5px solid #FF9966;
 }
