@@ -5,6 +5,7 @@ var Dancer = function(top, left, timeBetweenSteps){
   this._timeBetweenSteps = timeBetweenSteps;
   this.step();
   this.setPosition(top, left);
+  this.assignID();
 };
 
 Dancer.prototype.step = function() {
@@ -23,3 +24,7 @@ Dancer.prototype.setPosition = function(top, left) {
 Dancer.prototype.lineUp = function() {
   this.setPosition(this.top, 10);
 };
+
+Dancer.prototype.assignID = function() {
+  this.$node.attr('id', window.dancers.length);
+}
