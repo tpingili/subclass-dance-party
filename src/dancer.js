@@ -14,11 +14,16 @@ Dancer.prototype.step = function() {
 };
 
 Dancer.prototype.setPosition = function(top, left) {
-  var styleSettings = {
-    top: top,
-    left: left
-  };
-  this.$node.css(styleSettings);
+  if (this.checkPosition(top, left)) {
+    var styleSettings = {
+      top: top,
+      left: left
+    };
+    this.$node.css(styleSettings);
+  } else {
+    this.setPosition($(window).height() * Math.random(),
+      $(window).width() * Math.random());
+  }
 };
 
 Dancer.prototype.lineUp = function() {
@@ -27,4 +32,16 @@ Dancer.prototype.lineUp = function() {
 
 Dancer.prototype.assignID = function() {
   this.$node.attr('id', window.dancers.length);
-}
+};
+
+Dancer.prototype.checkPosition = function(top, left) {
+  var danceFloorHeight = $(window).height();
+  var danceFloorWidth = $(window).width();
+  var bufferTop = danceFloorHeight - 50;
+  var bufferLeft = danceFloorWidth - 50;
+  if (top > bufferTop || left > bufferLeft) {
+    return false;
+  } else {
+    return true;
+  }
+};

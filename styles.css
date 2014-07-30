@@ -6,7 +6,7 @@ body{
   background-color:#444;
   background-image:url("dancefloor.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -44,6 +44,8 @@ body, a:link, a:visited, a:active{
   border: 5px solid #99FFFF;
 }
 
-.movingScaleDancer{
-  border: 5px solid #FF9966;
+.bananaDancer{
+  border: none;
+  height: 50%;
+  width: 25%;
 }
